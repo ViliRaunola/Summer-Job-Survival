@@ -12,11 +12,12 @@ public class Shooting : MonoBehaviour
 
     public Transform firePoint;
     public GameObject bulletPrefab;
-    public float bulletForce = 10f;
     public PlayerInputActions playerControls;
+    public PlayerStats PlayerStats;
     private InputAction shoot;
     private float shooting;
-    private float fireRate = 0.5f;
+    private float fireRate;
+    private float bulletForce;
     private float lastShot = 0f;
     
 
@@ -29,13 +30,20 @@ public class Shooting : MonoBehaviour
     {
         shoot = playerControls.Player.Fire;
         shoot.Enable();
-        
+        bulletForce = PlayerStats.weaponDamage;
+        fireRate = PlayerStats.weaponFireRate;
     }
 
     private void OnDisable()
     {
         shoot.Disable();
         
+    }
+
+    public void UpdateWeaponStats()
+    {
+        bulletForce = PlayerStats.weaponDamage;
+        fireRate = PlayerStats.weaponFireRate;
     }
 
 

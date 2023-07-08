@@ -8,6 +8,9 @@ public class PlayerStats : MonoBehaviour
 
     public float health = 100;
     public Animator animator;
+    public float weaponFireRate = 0.5f;
+    public float weaponDamage = 2f;
+    public int selectedWeapon = 1;
 
     public float Health
     {
@@ -39,12 +42,6 @@ public class PlayerStats : MonoBehaviour
     public void HandleDefeatedCleanUp()
     {
         Destroy(gameObject);
-        SceneManager.LoadScene("GameOver");
-    }
-
-    private IEnumerator showGameOverMenu()
-    {
-        yield return new WaitForSeconds(5);
         SceneManager.LoadScene("GameOver");
     }
 
