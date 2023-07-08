@@ -10,6 +10,9 @@ public class Enemy : MonoBehaviour
     public float health = 30;
     public float damage = 10;
     public Animator animator;
+    private bool isDamagedable = false;
+    private float damageInterval = 1f;
+    private float time;
 
     public float Health
     {
@@ -38,6 +41,10 @@ public class Enemy : MonoBehaviour
         Destroy(gameObject);
     }
 
+    private void Start()
+    {
+        time = Time.time;
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -47,9 +54,40 @@ public class Enemy : MonoBehaviour
 
             if (player != null)
             {
-                player.Health -= damage;
-                player.GetHit();
+                if(player.health >= 0) {
+                    player.Health -= damage;
+                    player.GetHit();
+                }
+                
             }
+        }
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player" && isDamagedable)
+        {
+            PlayerStats player = collision.gameObject.GetComponent<PlayerStats>();
+
+            if (player != null)
+            {
+                if (player.health >= 0)
+                {
+                    player.Health -= damage;
+                    player.GetHit();
+                    isDamagedable = false;
+                    time = Time.time;
+                }
+                
+            }
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if(time + damageInterval < Time.time)
+        {
+            isDamagedable = true;
         }
     }
 }
