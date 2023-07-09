@@ -9,8 +9,10 @@ public class Enemy : MonoBehaviour
     public float speed = 10f;
     public float health = 30;
     public float damage = 10;
+    public float score = 100;
     public Animator animator;
-    private bool isDamagedable = false;
+    public PlayerStats playerStats;
+    private bool isPlayerDamagedable = false;
     private float damageInterval = 1f;
     private float time;
 
@@ -38,6 +40,7 @@ public class Enemy : MonoBehaviour
 
     public void Defeated()
     {
+        playerStats.score += score;
         Destroy(gameObject);
     }
 
@@ -54,7 +57,7 @@ public class Enemy : MonoBehaviour
 
             if (player != null)
             {
-                if(player.health >= 0) {
+                if(player.health > 0) {
                     player.Health -= damage;
                     player.GetHit();
                 }
@@ -65,17 +68,17 @@ public class Enemy : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player" && isDamagedable)
+        if (collision.gameObject.tag == "Player" && isPlayerDamagedable)
         {
             PlayerStats player = collision.gameObject.GetComponent<PlayerStats>();
 
             if (player != null)
             {
-                if (player.health >= 0)
+                if (player.health > 0)
                 {
                     player.Health -= damage;
                     player.GetHit();
-                    isDamagedable = false;
+                    isPlayerDamagedable = false;
                     time = Time.time;
                 }
                 
@@ -87,7 +90,7 @@ public class Enemy : MonoBehaviour
     {
         if(time + damageInterval < Time.time)
         {
-            isDamagedable = true;
+            isPlayerDamagedable = true;
         }
     }
 }

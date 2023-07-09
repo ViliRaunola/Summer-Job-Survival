@@ -56,7 +56,7 @@ public class Shooting : MonoBehaviour
     private void FixedUpdate()
     {
         shooting = shoot.ReadValue<float>();
-        if (shooting == 1 && (Time.time > fireRate + lastShot))
+        if (shooting == 1 && (Time.time > fireRate + lastShot) && PlayerStats.selectedWeapon >= 0)
         {
             Shoot();
             lastShot = Time.time;
