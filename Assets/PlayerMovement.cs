@@ -17,6 +17,9 @@ public class PlayerMovement : MonoBehaviour
     Vector2 aimDirectionInGame = Vector2.zero;
     private InputAction move;
     private InputAction aim;
+    private float timeOfBoost;
+    private bool isSpeedBoost = false;
+    private float speedBoostTime;
     
 
     private void Awake()
@@ -64,6 +67,27 @@ public class PlayerMovement : MonoBehaviour
         float angle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg - 90f;
         rigidBody.rotation = angle;
 
+        if (isSpeedBoost)
+        {
+            if (Time.time > timeOfBoost + speedBoostTime)
+            {
+                DisableSpeedBoost();
+            }
+        }
+
     }
 
+    private void DisableSpeedBoost()
+    {
+        movementSpeed = 10f;
+        isSpeedBoost = false;
+    }
+
+    public void GiveSpeedBoost(float amount, float time)
+    {
+        timeOfBoost = Time.time;
+        speedBoostTime = time;
+        movementSpeed = amount;
+        isSpeedBoost = true;
+    }
 }

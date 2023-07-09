@@ -41,6 +41,7 @@ public class Enemy : MonoBehaviour
     public void Defeated()
     {
         playerStats.Score += score;
+        GetComponent<LootBag>().CreateLoot(transform.position);
         Destroy(gameObject);
     }
 

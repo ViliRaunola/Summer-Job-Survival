@@ -50,6 +50,12 @@ public class PlayerStats : MonoBehaviour
         uiLogic.SetScore();
     }
 
+    public void AddHp(float amount)
+    {
+        health += amount;
+        uiLogic.SetHitPointsText();
+    }
+
     public void GetHit()
     {
         animator.SetTrigger("isHit");
