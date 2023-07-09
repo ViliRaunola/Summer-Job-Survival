@@ -7,7 +7,6 @@ public class DeathMenu : MonoBehaviour
 {
     public void PlayGame()
     {
-        Debug.Log("Pressing paly game button");
         SceneManager.LoadScene("Game");
     }
 

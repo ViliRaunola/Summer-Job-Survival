@@ -40,7 +40,7 @@ public class Enemy : MonoBehaviour
 
     public void Defeated()
     {
-        playerStats.score += score;
+        playerStats.Score += score;
         Destroy(gameObject);
     }
 

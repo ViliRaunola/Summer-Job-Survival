@@ -8,18 +8,25 @@ public class UiLogic : MonoBehaviour
 {
 
     public TMP_Text hitPointText;
+    public TMP_Text scoreText;
     public PlayerStats playerStats;
 
     // Start is called before the first frame update
     void Start()
     {
         SetHitPointsText();
+        SetScore();
     }
 
     public void SetHitPointsText()
     {
         hitPointText.text = playerStats.health.ToString() + "%";
         SetHitPointsColor();
+    }
+
+    public void SetScore()
+    {
+        scoreText.text = playerStats.score.ToString();
     }
 
     private void SetHitPointsColor()

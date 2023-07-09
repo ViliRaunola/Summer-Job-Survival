@@ -36,12 +36,18 @@ public class PlayerStats : MonoBehaviour
         set
         {
             score = value;
+            OnScoreChange();
         }
 
         get
         {
             return score;
         }
+    }
+
+    public void OnScoreChange()
+    {
+        uiLogic.SetScore();
     }
 
     public void GetHit()
