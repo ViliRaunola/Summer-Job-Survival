@@ -21,6 +21,10 @@ public class LootCollider : MonoBehaviour
                 {
                     player.AddHp(30f);
                     Destroy(gameObject);
+                }else if (gameObject.name == "Coin")
+                {
+                    player.AddCoin();
+                    Destroy(gameObject);
                 }
             }
         }

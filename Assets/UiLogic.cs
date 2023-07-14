@@ -9,6 +9,7 @@ public class UiLogic : MonoBehaviour
 
     public TMP_Text hitPointText;
     public TMP_Text scoreText;
+    public TMP_Text collectedCoins;
     public PlayerStats playerStats;
 
     // Start is called before the first frame update
@@ -16,6 +17,12 @@ public class UiLogic : MonoBehaviour
     {
         SetHitPointsText();
         SetScore();
+        SetCoins();
+    }
+
+    public void SetCoins()
+    {
+        collectedCoins.text = playerStats.coins.ToString();
     }
 
     public void SetHitPointsText()

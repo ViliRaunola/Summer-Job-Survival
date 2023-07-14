@@ -8,6 +8,7 @@ public class PlayerStats : MonoBehaviour
 
     public float health = 100;
     public float score = 0;
+    public float coins = 0;
     public Animator animator;
     public float weaponFireRate = 0.5f;
     public float weaponDamage = 2f;
@@ -48,6 +49,12 @@ public class PlayerStats : MonoBehaviour
     public void OnScoreChange()
     {
         uiLogic.SetScore();
+    }
+
+    public void AddCoin()
+    {
+        coins += 1;
+        uiLogic.SetCoins();
     }
 
     public void AddHp(float amount)

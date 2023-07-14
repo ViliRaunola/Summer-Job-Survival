@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fbf6887560651f740873bfa59754f69b, type: 3}
-  m_Name: EnergyDrink
+  m_Name: Coin
   m_EditorClassIdentifier: 
-  lootSprite: {fileID: 21300000, guid: 1b1207f0df70f2b45bd2baa7dbaad123, type: 3}
-  lootName: EnergyDrink
-  dropChance: 30
+  lootSprite: {fileID: 21300000, guid: 4f59b2f86b809fd488572dd0d08fcde3, type: 3}
+  lootName: Coin
+  dropChance: 90
