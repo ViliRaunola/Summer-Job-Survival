@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Rifle : MonoBehaviour
 {
-    private float fireRate = 0.1f;
-    private float bulletForce = 2f;
-    private int weaponId = 1;
-    private float bulletDamage = 34;
+    public float fireRate = 0.1f;
+    public float bulletForce = 2f;
+    public int weaponId = 1;
+    public float bulletDamage = 34;
     public Shooting shooting;
     public Weapons weapons;
     public Bullet bullet;

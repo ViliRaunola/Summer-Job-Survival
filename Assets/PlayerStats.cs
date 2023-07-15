@@ -20,7 +20,7 @@ public class PlayerStats : MonoBehaviour
         set
         {
             health = value;
-            if (health == 0)
+            if (health <= 0)
             {
                 Defeated();
             }
