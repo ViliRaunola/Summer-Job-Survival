@@ -15,6 +15,7 @@ public class UiLogic : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         SetHitPointsText();
         SetScore();
         SetCoins();
@@ -22,17 +23,20 @@ public class UiLogic : MonoBehaviour
 
     public void SetCoins()
     {
+        
         collectedCoins.text = playerStats.coins.ToString();
     }
 
     public void SetHitPointsText()
     {
+       
         hitPointText.text = playerStats.health.ToString() + "%";
         SetHitPointsColor();
     }
 
     public void SetScore()
     {
+        
         scoreText.text = playerStats.score.ToString();
     }
 

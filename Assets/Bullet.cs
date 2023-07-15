@@ -10,7 +10,7 @@ public class Bullet : MonoBehaviour
     public float deadZoneXPos = 200;
     public float deadZoneYNeg = -200;
     public float deadZoneYPos = 200;
-    public float bulletDamage = 10;
+    public float bulletDamage = StateNameController.bulletDamage;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -22,6 +22,7 @@ public class Bullet : MonoBehaviour
 
             if(enemy != null)
             {
+                
                 enemy.Health -= bulletDamage;
             }
         }

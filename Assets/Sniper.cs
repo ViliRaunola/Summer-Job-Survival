@@ -16,7 +16,7 @@ public class Sniper : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            Debug.Log("HERE");
+            
             PlayerStats player = collision.gameObject.GetComponent<PlayerStats>();
 
             if (player != null)

@@ -12,8 +12,10 @@ public class PlayerStats : MonoBehaviour
     public Animator animator;
     public float weaponFireRate = 0.5f;
     public float weaponDamage = 2f;
-    public int selectedWeapon = 1;
+    public int selectedWeapon = -1;
     public UiLogic uiLogic;
+    public Weapons weapons;
+    public Shooting shooting;
 
     public float Health
     {
@@ -44,6 +46,19 @@ public class PlayerStats : MonoBehaviour
         {
             return score;
         }
+    }
+
+    public void Start()
+    {
+        Score = StateNameController.playerScore;
+        selectedWeapon = StateNameController.selectedWeapon;
+        weaponDamage = StateNameController.damage;
+        weaponFireRate = StateNameController.fireRate;
+        coins = StateNameController.coins;
+        uiLogic.SetCoins();
+        weapons.UpdateSelectedWeapon();
+        shooting.UpdateWeaponStats();
+        
     }
 
     public void OnScoreChange()
