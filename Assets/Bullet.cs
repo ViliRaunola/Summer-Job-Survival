@@ -6,10 +6,10 @@ public class Bullet : MonoBehaviour
 {
 
     public GameObject hitEffect;
-    public float deadZoneXNeg = -200;
-    public float deadZoneXPos = 200;
-    public float deadZoneYNeg = -200;
-    public float deadZoneYPos = 200;
+    public float deadZoneXNeg = -1000;
+    public float deadZoneXPos = 1000;
+    public float deadZoneYNeg = -1000;
+    public float deadZoneYPos = 1000;
     public float bulletDamage = StateNameController.bulletDamage;
 
     private void OnCollisionEnter2D(Collision2D collision)

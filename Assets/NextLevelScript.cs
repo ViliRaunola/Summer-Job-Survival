@@ -15,16 +15,25 @@ public class NextLevelScript : MonoBehaviour
         {
             if(scene == "Level1")
             {
+                StateNameController.playerScore = 0;
+                StateNameController.selectedWeapon = -1;
+                StateNameController.bulletDamage = 0;
+                StateNameController.fireRate = 0;
+                StateNameController.damage = 0;
+                StateNameController.coins = 0;
+                SceneManager.LoadScene(scene);
+            }else
+            {
+                StateNameController.playerScore = playerStats.Score;
+                StateNameController.selectedWeapon = playerStats.selectedWeapon;
+                StateNameController.bulletDamage = bullet.bulletDamage;
+                StateNameController.fireRate = playerStats.weaponFireRate;
+                StateNameController.damage = playerStats.weaponDamage;
+                StateNameController.coins = playerStats.coins;
                 SceneManager.LoadScene(scene);
             }
 
-            StateNameController.playerScore = playerStats.Score;
-            StateNameController.selectedWeapon = playerStats.selectedWeapon;
-            StateNameController.bulletDamage = bullet.bulletDamage;
-            StateNameController.fireRate = playerStats.weaponFireRate;
-            StateNameController.damage = playerStats.weaponDamage;
-            StateNameController.coins = playerStats.coins;
-            SceneManager.LoadScene(scene);
+            
         }
     }
 }

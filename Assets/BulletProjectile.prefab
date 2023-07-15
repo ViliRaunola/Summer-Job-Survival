@@ -172,7 +172,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitEffect: {fileID: 0}
-  deadZoneXNeg: -100
-  deadZoneXPos: 100
-  deadZoneYNeg: -100
-  deadZoneYPos: 100
+  deadZoneXNeg: -1000
+  deadZoneXPos: 1000
+  deadZoneYNeg: -1000
+  deadZoneYPos: 1000
+  bulletDamage: 1000

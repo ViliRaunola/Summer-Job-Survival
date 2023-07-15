@@ -1056,6 +1056,8 @@ MonoBehaviour:
   weaponDamage: 2
   selectedWeapon: -1
   uiLogic: {fileID: 1482649290}
+  weapons: {fileID: 1909212848}
+  shooting: {fileID: 445840955}
 --- !u!95 &445840953
 Animator:
   serializedVersion: 5
@@ -32514,6 +32516,14 @@ PrefabInstance:
       propertyPath: scene
       value: Level1
       objectReference: {fileID: 0}
+    - target: {fileID: 4331025878594336923, guid: 096725e80dd2b57409ac88ae6123bb2b, type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: -9086226533074235612, guid: 854d6650e7e3b4f43986b64dec34cc72, type: 3}
+    - target: {fileID: 4331025878594336923, guid: 096725e80dd2b57409ac88ae6123bb2b, type: 3}
+      propertyPath: playerStats
+      value: 
+      objectReference: {fileID: 445840952}
     - target: {fileID: 5703172086778271599, guid: 096725e80dd2b57409ac88ae6123bb2b, type: 3}
       propertyPath: m_RootOrder
       value: 18
