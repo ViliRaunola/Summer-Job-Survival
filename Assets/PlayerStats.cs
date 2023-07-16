@@ -88,6 +88,12 @@ public class PlayerStats : MonoBehaviour
     public void Defeated()
     {
         deathSound.Play();
+        StateNameController.playerScore = 0;
+        StateNameController.selectedWeapon = -1;
+        StateNameController.bulletDamage = 0;
+        StateNameController.fireRate = 0;
+        StateNameController.damage = 0;
+        StateNameController.coins = 0;
         animator.SetTrigger("isPlayerDeath");
     }
 

@@ -93,7 +93,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scene: 
   playerStats: {fileID: 0}
-  bullet: {fileID: 0}
+  bullet: {fileID: -9086226533074235612, guid: 854d6650e7e3b4f43986b64dec34cc72, type: 3}
   doorSound: {fileID: 8243444117962680189}
 --- !u!82 &8243444117962680189
 AudioSource:

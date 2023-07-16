@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da996045c46d27747a44f5013cd59693, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  speed: 6
   health: 200
   damage: 25
   score: 300
@@ -216,8 +216,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  enemySpeed: 0
-  followDistance: 0
+  enemySpeed: 6
+  followDistance: 13
 --- !u!114 &6010928924783071485
 MonoBehaviour:
   m_ObjectHideFlags: 0
