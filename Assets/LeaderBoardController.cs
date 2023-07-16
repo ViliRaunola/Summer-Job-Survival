@@ -47,6 +47,17 @@ public class LeaderBoardController : MonoBehaviour
         SceneManager.LoadScene("Menu");
     }
 
+    public void Credits()
+    {
+        StateNameController.playerScore = 0;
+        StateNameController.selectedWeapon = -1;
+        StateNameController.bulletDamage = 0;
+        StateNameController.fireRate = 0;
+        StateNameController.damage = 0;
+        StateNameController.coins = 0;
+        SceneManager.LoadScene("Credits");
+    }
+
     public void SubmitScore()
     {
 
@@ -65,7 +76,7 @@ public class LeaderBoardController : MonoBehaviour
 
     public void FetcHighScores()
     {
-        LootLockerSDKManager.GetScoreList(leaderboardKey, 10, 0, (response) =>
+        LootLockerSDKManager.GetScoreList(leaderboardKey, 15, 0, (response) =>
         {
             if (response.success)
             {
