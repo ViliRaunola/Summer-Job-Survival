@@ -3704,6 +3704,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4331025878594336923, guid: 096725e80dd2b57409ac88ae6123bb2b, type: 3}
+      propertyPath: scene
+      value: LeaderBoard
+      objectReference: {fileID: 0}
+    - target: {fileID: 4331025878594336923, guid: 096725e80dd2b57409ac88ae6123bb2b, type: 3}
       propertyPath: playerStats
       value: 
       objectReference: {fileID: 47505715}
