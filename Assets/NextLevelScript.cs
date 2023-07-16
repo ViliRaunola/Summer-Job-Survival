@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using static Unity.VisualScripting.Member;
 
 public class NextLevelScript : MonoBehaviour
 {
     public string scene;
     public PlayerStats playerStats;
     public Bullet bullet;
+    [SerializeField] private AudioSource doorSound;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -15,6 +17,7 @@ public class NextLevelScript : MonoBehaviour
         {
             if(scene == "Level1")
             {
+                PlaySound();
                 StateNameController.playerScore = 0;
                 StateNameController.selectedWeapon = -1;
                 StateNameController.bulletDamage = 0;
@@ -24,6 +27,7 @@ public class NextLevelScript : MonoBehaviour
                 SceneManager.LoadScene(scene);
             }else
             {
+                PlaySound();
                 StateNameController.playerScore = playerStats.Score;
                 StateNameController.selectedWeapon = playerStats.selectedWeapon;
                 StateNameController.bulletDamage = bullet.bulletDamage;
@@ -35,5 +39,11 @@ public class NextLevelScript : MonoBehaviour
 
             
         }
+    }
+
+    IEnumerator PlaySound()
+    {
+        doorSound.Play();
+        yield return new WaitWhile(() => doorSound.isPlaying);
     }
 }

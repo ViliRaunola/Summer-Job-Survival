@@ -14,12 +14,17 @@ public class Shooting : MonoBehaviour
     public GameObject bulletPrefab;
     public PlayerInputActions playerControls;
     public PlayerStats PlayerStats;
+   
     private InputAction shoot;
     private float shooting;
     private float fireRate;
     private float bulletForce;
     private float lastShot = 0f;
-    
+
+
+    [SerializeField] private AudioSource pistolShootSound;
+    [SerializeField] private AudioSource rifleShootSound;
+    [SerializeField] private AudioSource sniperShootSound;
 
     private void Awake()
     {
@@ -70,5 +75,21 @@ public class Shooting : MonoBehaviour
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
+        ShootSound();
+    }
+
+    private void ShootSound()
+    {
+        if(PlayerStats.selectedWeapon == 0)
+        {
+            pistolShootSound.Play();
+        }else if(PlayerStats.selectedWeapon == 2)
+        {
+            sniperShootSound.Play();
+        }
+        else if (PlayerStats.selectedWeapon == 1)
+        {
+            rifleShootSound.Play();
+        }
     }
 }

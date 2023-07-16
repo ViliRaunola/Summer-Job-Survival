@@ -16,6 +16,7 @@ public class PlayerStats : MonoBehaviour
     public UiLogic uiLogic;
     public Weapons weapons;
     public Shooting shooting;
+    [SerializeField] private AudioSource deathSound;
 
     public float Health
     {
@@ -86,6 +87,7 @@ public class PlayerStats : MonoBehaviour
 
     public void Defeated()
     {
+        deathSound.Play();
         animator.SetTrigger("isPlayerDeath");
     }
 

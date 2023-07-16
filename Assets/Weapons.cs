@@ -11,6 +11,8 @@ public class Weapons : MonoBehaviour
     private int previousWeapon = 0;
     public PlayerStats playerStats;
 
+    [SerializeField] private AudioSource selectGunSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -43,6 +45,7 @@ public class Weapons : MonoBehaviour
         {
             if( i == selectedWeapon )
             {
+                selectGunSound.Play();
                 weapon.gameObject.SetActive(true);
             } else
             {

@@ -16,6 +16,7 @@ public class Enemy : MonoBehaviour
     private float damageInterval = 1f;
     private float time;
 
+    [SerializeField] private AudioSource deathSound;
     public float Health
     {
         set
@@ -35,6 +36,7 @@ public class Enemy : MonoBehaviour
 
     public void PlayDefeatedAnimation()
     {
+        deathSound.Play();
         animator.SetTrigger("death");
     }
 
