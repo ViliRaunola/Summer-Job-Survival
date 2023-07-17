@@ -2,6 +2,8 @@
 
 The game has been made for the LUT course "Game Development Project".
 
+## [Trailer On YouTube](https://www.youtube.com/watch?v=02w33QYB1mc)
+
 ## Live web version
 
 The game is supported on the web and as a Windows desktop build. The web version can be found here: https://viliraunola.github.io/Summer-Job-Survival-Live/ 
