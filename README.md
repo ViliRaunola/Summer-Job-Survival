@@ -32,22 +32,17 @@ The game has free assets for
 
 - Movement: 
 https://www.youtube.com/watch?v=whzomFgjT50&list=LL&index=8&t=1171s, 
-https://www.youtube.com/watch?v=HmXU4dZbaMw&list=LL&index=6&pp=gA
-QBiAQB
+https://www.youtube.com/watch?v=HmXU4dZbaMw&list=LL&index=6&pp=gAQBiAQB
 - Aiming/ Shooting: 
-https://www.youtube.com/watch?v=LNLVOjbrQj4&list=LL&index=5&t=933s&p
-p=gAQBiAQB
+https://www.youtube.com/watch?v=LNLVOjbrQj4&list=LL&index=5&t=933s&pp=gAQBiAQB
 - Tilemaps: 
-https://www.youtube.com/watch?v=2obtqmBHUW4&list=LL&index=4&t=262s
-&pp=gAQBiAQB
+https://www.youtube.com/watch?v=2obtqmBHUW4&list=LL&index=4&t=262s&pp=gAQBiAQB
 - Sound effects: 
 https://www.youtube.com/watch?v=J77CMuAwVDY&list=LL&index=4&t=325s
 - Online scoreboard: 
-https://www.youtube.com/watch?v=pp8Vl4cKLdc&list=LL&index=2&t=315s&p
-p=gAQBiAQB, https://www.youtube.com/watch?v=u8llsk7FoYg&t=644s
+https://www.youtube.com/watch?v=pp8Vl4cKLdc&list=LL&index=2&t=315s&pp=gAQBiAQB, https://www.youtube.com/watch?v=u8llsk7FoYg&t=644s
 - End scene: 
-https://www.youtube.com/watch?v=cj6hwCjiVZE&list=LL&index=1&pp=gAQBi
-AQB
+https://www.youtube.com/watch?v=cj6hwCjiVZE&list=LL&index=1&pp=gAQBiAQB
 - Camera follow: https://www.youtube.com/watch?v=ZBj3LBA2vUY
 - Creating enemies: https://www.youtube.com/watch?v=N1BKXCxM_hA , 
 https://www.youtube.com/watch?v=7iYWpzL9GkM
